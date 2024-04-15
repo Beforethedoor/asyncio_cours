@@ -11,7 +11,7 @@ def print_fib(number: int) -> None:
         else:
             return fib(n - 1) + fib(n - 2)
 
-    print(f'fib({number}) равно {fib(number)}')
+    print(f"fib({number}) равно {fib(number)}")
 
 
 def fibs_with_threads():
@@ -29,4 +29,4 @@ start_threads = time.time()
 fibs_with_threads()
 end_threads = time.time()
 
-print(f'Многопоточное вычисление заняло {end_threads - start_threads:.4f} с.')
+print(f"Многопоточное вычисление заняло {end_threads - start_threads:.4f} с.")

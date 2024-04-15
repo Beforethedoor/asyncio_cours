@@ -1,9 +1,7 @@
-
-
 def make_request():
-    print('cpu_bound_setup()')
-    print('io_bound_web_request()')
-    print('cpu_bound_postprocess()')
+    print("cpu_bound_setup()")
+    print("io_bound_web_request()")
+    print("cpu_bound_postprocess()")
 
 
 task_one = make_request()

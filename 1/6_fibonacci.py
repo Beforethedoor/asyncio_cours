@@ -10,7 +10,7 @@ def print_fib(number: int) -> None:
         else:
             return fib(n - 1) + fib(n - 2)
 
-    print(f'fib({number}) равно {fib(number)}')
+    print(f"fib({number}) равно {fib(number)}")
 
 
 def fibs_no_threading():
@@ -22,4 +22,4 @@ start = time.time()
 fibs_no_threading()
 end = time.time()
 
-print(f'Время работы {end - start:.4f} с.')
+print(f"Время работы {end - start:.4f} с.")
