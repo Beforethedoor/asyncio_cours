@@ -1,7 +1,5 @@
 import selectors
 import socket
-from selectors import SelectorKey
-from typing import List, Tuple
 
 selector = selectors.DefaultSelector()
 
@@ -16,10 +14,8 @@ server_socket.listen()
 selector.register(server_socket, selectors.EVENT_READ)
 
 while True:
-    events: List[Tuple[SelectorKey, int]] = selector.select(timeout=1)
+    events = selector.select()
 
-    if len(events) == 0:
-        print("Событий нет, подожду еще!")
     for event, _ in events:
         event_socket = event.fileobj
         if event_socket == server_socket:
